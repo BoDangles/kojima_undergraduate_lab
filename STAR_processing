@@ -1,0 +1,19 @@
+
+
+rm(list = ls())
+
+sink(file = "kinouchi_STAR_commands.txt")
+kinouchi_filename <- read_excel("/Users/kyle/Library/Containers/com.microsoft.Excel/Data/Desktop/Fall 2021/kinouchi_filename.xlsx")
+base <- 587
+i <- 1
+
+while (base <= 658){
+  srr <- sprintf("SRR6357%i", base)
+  filename <- kinouchi_filename[i,1]
+  srr_path <- sprintf("/groups/kojima/Softwares/STAR-2.7.7a/bin/Linux_x86_64/STAR --runThreadN 16 --genomeDir /groups/kojima/Softwares/STAR-2.7.7a/mm10/ \\--sjdbGTFfile /groups/kojima/Softwares/STAR-2.7.7a/mm10/mm10.ncbiRefSeq.gtf --sjdbOverhang 100 \\--outFilterScoreMinOverLread 0.3 \\—outFilterMatchNminOverLread 0.3 \\--readFilesIn /groups/kojima/Kinouchi_2018/%s/%s.fastq \\--outSAMtype BAM Unsorted \\--outFileNamePrefix /groups/kojima/Kinouchi_2018/STAR/%s_%s", srr, srr, srr, filename)
+  cat(srr_path, "\n\n")
+  i <- i+1
+  base <- base+1
+}
+
+sink(file = NULL)
