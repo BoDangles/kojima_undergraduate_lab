@@ -1,9 +1,0 @@
-rm(list = ls())
-
-base <- 601
-while (base <= 658){
-  srr <- sprintf("SRR6357%i", base)
-  srr_path <- sprintf("/groups/kojima/Softwares/sratoolkit.2.9.2-centos_linux64/bin/fasterq-dump %s --outdir /groups/kojima/Kinouchi_2018/%s", srr, srr)
-  cat(srr_path, "\n")
-  base <- base+1
-}
