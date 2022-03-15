@@ -24,4 +24,4 @@
 ###   2) An 'Import Excel Data' window will open.  In the 'file/URL:' text box, paste the pathname that was used in line 7 of the code.
 ###   3) Select 'Import'.  This will open your dataset in a R Studio tab.  You can use this as an opportunity to double check the data for errors.
 
-### Thats it!  Now just run the code by selecting the 'Source' tab and it will output a .txt file named 'LASTNAME_YEAR_commands.txt'.  Open this file in any text editor, delete the first 3 lines (they contain only '-' and '/' and I dont know why), an copy and paste the contents of the file and run it through the ARC.
+### Thats it!  Now just run the code by selecting the 'Source' tab and it will output a .txt file named 'LASTNAME_YEAR_commands.txt'.  Open this file in any text editor, delete the first 3 lines (they contain only '-' and '/' and I dont know why), then copy and paste the contents of the file and run it through the ARC.
